@@ -9,5 +9,5 @@
 #import "GridViewController.h"
 
 @interface ProvinceViewController : GridViewController
-
+@property (nonatomic, strong) NSMutableArray *provinces;
 @end

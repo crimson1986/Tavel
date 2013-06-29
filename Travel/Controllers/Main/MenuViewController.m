@@ -9,9 +9,10 @@
 #import "MenuViewController.h"
 #import "MMGridViewDefaultCell.h"
 #import "ProvinceViewController.h"
+#import "MDMenuActivity.h"
 
 @interface MenuViewController ()<MMGridViewDataSource,MMGridViewDelegate>
-
+@property (nonatomic, strong) NSMutableArray *arrayOfTravelMenu;
 @end
 
 @implementation MenuViewController
@@ -50,6 +51,30 @@
 
 
 #pragma mark Methods
+#pragma mark Setter/Getter
+
+- (NSMutableArray *)arrayOfTravelMenu {
+    if (!_arrayOfTravelMenu) {
+        _arrayOfTravelMenu = [[NSMutableArray alloc] initWithCapacity:0];
+        [_arrayOfTravelMenu addObjectsFromArray:@[
+         [MDMenuActivity activityWithTitle:@"Adventure" icon:@""],
+         [MDMenuActivity activityWithTitle:@"Cycling" icon:@""],
+         [MDMenuActivity activityWithTitle:@"Groups" icon:@""],
+         [MDMenuActivity activityWithTitle:@"Horse riding" icon:@""],
+         [MDMenuActivity activityWithTitle:@"Kitesurf" icon:@""],
+         [MDMenuActivity activityWithTitle:@"Rock climbing" icon:@""],
+         [MDMenuActivity activityWithTitle:@"Sailing" icon:@""],
+         [MDMenuActivity activityWithTitle:@"Scuba diving" icon:@""],
+         [MDMenuActivity activityWithTitle:@"Ski" icon:@""],
+         [MDMenuActivity activityWithTitle:@"Sup" icon:@""],
+         [MDMenuActivity activityWithTitle:@"Surf" icon:@""],
+         [MDMenuActivity activityWithTitle:@"Walking" icon:@""],
+         [MDMenuActivity activityWithTitle:@"Windsurf" icon:@""]
+         
+         ]];
+    }
+    return _arrayOfTravelMenu;
+}
 
 - (void)createGridView {
     self.gridView.frame = CGRectMake(0,CGRectGetMaxY(self.navigationBar.frame), self.view.bounds.size.width, self.view.bounds.size.height-(CGRectGetHeight(self.pageController.frame)+CGRectGetMaxY(self.navigationBar.frame)));
@@ -57,12 +82,14 @@
     self.gridView.dataSource = self;
 }
 
-#pragma mark Setter/Getter
+
 
 
 #pragma mark Collection Delegate
 - (void)gridView:(MMGridView *)gridView didSelectCell:(MMGridViewCell *)cell atIndex:(NSUInteger)index {
     ProvinceViewController *province = [[ProvinceViewController alloc] initWithNibName:@"ProvinceViewController" bundle:nil];
+    MDMenuActivity *ma = self.arrayOfTravelMenu[index];
+    province.provinces = ma.getProvince;
     [self.navigationController pushViewController:province animated:YES];
 }
 
@@ -76,11 +103,12 @@
 #pragma mark Collection Data Source
 
 - (NSInteger)numberOfCellsInGridView:(MMGridView *)gridView {
-    return 14;//self.arrayOfTravelMenu.count;
+    return self.arrayOfTravelMenu.count;
 }
 - (MMGridViewCell *)gridView:(MMGridView *)gridView cellAtIndex:(NSUInteger)index {
     MMGridViewDefaultCell *cell = [[MMGridViewDefaultCell alloc] initWithFrame:CGRectZero];
-    cell.textLabel.text = [NSString stringWithFormat:@"Cell %d",index];
+    MDMenuActivity *ma = self.arrayOfTravelMenu[index];
+    cell.textLabel.text = ma.title;
     return cell;
 }
 - (void)viewDidUnload {

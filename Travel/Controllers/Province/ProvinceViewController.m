@@ -8,6 +8,7 @@
 
 #import "ProvinceViewController.h"
 #import "MMGridViewDefaultCell.h"
+#import "MDActivity.h"
 
 @interface ProvinceViewController ()<MMGridViewDataSource,MMGridViewDelegate>
 
@@ -63,11 +64,13 @@
 #pragma mark Collection Data Source
 
 - (NSInteger)numberOfCellsInGridView:(MMGridView *)gridView {
-    return 9;
+    return self.provinces.count;
 }
 - (MMGridViewCell *)gridView:(MMGridView *)gridView cellAtIndex:(NSUInteger)index {
     MMGridViewDefaultCell *cell = [[MMGridViewDefaultCell alloc] initWithFrame:CGRectZero];
-    cell.textLabel.text = [NSString stringWithFormat:@"Cell %d",index];
+    MDActivity *ma = self.provinces[index];
+    cell.textLabel.text = ma.title;
+    cell.imageView.image = [UIImage imageNamed:[ma imageName]];
     return cell;
 }
 @end
