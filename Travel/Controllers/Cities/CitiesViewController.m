@@ -1,21 +1,21 @@
 //
-//  ProvinceViewController.m
+//  CitiesViewController.m
 //  Travel
 //
-//  Created by Chirag shah on 26/05/13.
+//  Created by Chirag shah on 29/06/13.
 //  Copyright (c) 2013 Chirag shah. All rights reserved.
 //
 
-#import "ProvinceViewController.h"
-#import "MMGridViewDefaultCell.h"
-#import "MDProvinceActivity.h"
 #import "CitiesViewController.h"
+#import "MMGridViewDefaultCell.h"
+#import "MDActivity.h"
 
-@interface ProvinceViewController ()<MMGridViewDataSource,MMGridViewDelegate>
+@interface CitiesViewController ()<MMGridViewDataSource,MMGridViewDelegate>
 
 @end
 
-@implementation ProvinceViewController
+
+@implementation CitiesViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,7 +30,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.navigationTitle = localizedString(@"ProvinceTitle");
+    self.navigationTitle = localizedString(@"CitiesTitle");
     [self setBackButtonWithTitle:@"Back"];
     [self createGridView];
 }
@@ -54,11 +54,10 @@
 
 #pragma mark Collection Delegate
 - (void)gridView:(MMGridView *)gridView didSelectCell:(MMGridViewCell *)cell atIndex:(NSUInteger)index {
-    CitiesViewController *cities = [CitiesViewController instanceOfNibNamed:@"CitiesViewController"];
-    [self.navigationController pushViewController:cities animated:YES];
+    
 }
 - (void)gridView:(MMGridView *)gridView changedPageToIndex:(NSUInteger)index {
-
+    
 }
 - (void)gridView:(MMGridView *)gridView didDoubleTapCell:(MMGridViewCell *)cell atIndex:(NSUInteger)index {
     
@@ -66,13 +65,14 @@
 #pragma mark Collection Data Source
 
 - (NSInteger)numberOfCellsInGridView:(MMGridView *)gridView {
-    return self.provinces.count;
+    return self.cities.count;
 }
 - (MMGridViewCell *)gridView:(MMGridView *)gridView cellAtIndex:(NSUInteger)index {
     MMGridViewDefaultCell *cell = [[MMGridViewDefaultCell alloc] initWithFrame:CGRectZero];
-    MDProvinceActivity *ma = self.provinces[index];
-    cell.textLabel.text = ma.title;
+    MDActivity *ma = self.cities[index];
+    cell.textLabel.text = nil;
     cell.imageView.image = [UIImage imageNamed:[ma imageName]];
     return cell;
 }
+
 @end

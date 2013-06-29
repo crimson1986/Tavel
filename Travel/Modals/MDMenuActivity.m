@@ -7,6 +7,7 @@
 //
 
 #import "MDMenuActivity.h"
+#import "MDProvinceActivity.h"
 
 @interface MDMenuActivity()
 @property (nonatomic, strong) NSMutableArray *provices;
@@ -38,119 +39,119 @@
 
 - (NSArray *)adventure {
     return @[
-    [MDActivity activityWithTitle:@"AlmeriaProvince" icon:@"adventure_AlmeriaProvince"],
-    [MDActivity activityWithTitle:@"CadizProvince" icon:@"adventure_CadizProvince"],
-    [MDActivity activityWithTitle:@"CordobaProvince" icon:@"adventure_CordobaProvince"],
-    [MDActivity activityWithTitle:@"GranadaProvince" icon:@"adventure_GranadaProvince"],
-    [MDActivity activityWithTitle:@"HuelvaProvince" icon:@"adventure_HuelvaProvince"],
-    [MDActivity activityWithTitle:@"JaenProvince" icon:@"adventure_JaenProvince"],
-    [MDActivity activityWithTitle:@"MalagaProvince" icon:@"adventure_MalagaProvince"],
-    [MDActivity activityWithTitle:@"SevilleProvince" icon:@"adventure_SevilleProvince"]
+    [MDProvinceActivity activityWithTitle:@"AlmeriaProvince" icon:@"adventure_AlmeriaProvince"],
+    [MDProvinceActivity activityWithTitle:@"CadizProvince" icon:@"adventure_CadizProvince"],
+    [MDProvinceActivity activityWithTitle:@"CordobaProvince" icon:@"adventure_CordobaProvince"],
+    [MDProvinceActivity activityWithTitle:@"GranadaProvince" icon:@"adventure_GranadaProvince"],
+    [MDProvinceActivity activityWithTitle:@"HuelvaProvince" icon:@"adventure_HuelvaProvince"],
+    [MDProvinceActivity activityWithTitle:@"JaenProvince" icon:@"adventure_JaenProvince"],
+    [MDProvinceActivity activityWithTitle:@"MalagaProvince" icon:@"adventure_MalagaProvince"],
+    [MDProvinceActivity activityWithTitle:@"SevilleProvince" icon:@"adventure_SevilleProvince"]
     ];
 }
 
 - (NSArray *)cycling {
     return @[
-    [MDActivity activityWithTitle:@"CadizProvince" icon:@"cycling_CadizProvince"],
-    [MDActivity activityWithTitle:@"GranadaProvince" icon:@"cycling_GranadaProvince"],
-    [MDActivity activityWithTitle:@"HuelvaProvince" icon:@"cycling_HuelvaProvince"],
-    [MDActivity activityWithTitle:@"JaenProvince" icon:@"cycling_JaenProvince"],
-    [MDActivity activityWithTitle:@"MalagaProvince" icon:@"cycling_MalagaProvince"],
-    [MDActivity activityWithTitle:@"SevilleProvince" icon:@"cycling_SevilleProvince"]
+    [MDProvinceActivity activityWithTitle:@"CadizProvince" icon:@"cycling_CadizProvince"],
+    [MDProvinceActivity activityWithTitle:@"GranadaProvince" icon:@"cycling_GranadaProvince"],
+    [MDProvinceActivity activityWithTitle:@"HuelvaProvince" icon:@"cycling_HuelvaProvince"],
+    [MDProvinceActivity activityWithTitle:@"JaenProvince" icon:@"cycling_JaenProvince"],
+    [MDProvinceActivity activityWithTitle:@"MalagaProvince" icon:@"cycling_MalagaProvince"],
+    [MDProvinceActivity activityWithTitle:@"SevilleProvince" icon:@"cycling_SevilleProvince"]
     ];
 }
 
 - (NSArray *)groups {
     return @[
-        [MDActivity activityWithTitle:@"CadizProvince" icon:@"groups_CadizProvince"],
-        [MDActivity activityWithTitle:@"GranadaProvince" icon:@"groups_GranadaProvince"],
-        [MDActivity activityWithTitle:@"MalagaProvince" icon:@"groups_MalagaProvince"]
+        [MDProvinceActivity activityWithTitle:@"CadizProvince" icon:@"groups_CadizProvince"],
+        [MDProvinceActivity activityWithTitle:@"GranadaProvince" icon:@"groups_GranadaProvince"],
+        [MDProvinceActivity activityWithTitle:@"MalagaProvince" icon:@"groups_MalagaProvince"]
     ];
 }
 
 - (NSArray *)horseriding {
     return @[
-        [MDActivity activityWithTitle:@"CadizProvince" icon:@"horseriding_CadizProvince"],
-        [MDActivity activityWithTitle:@"GranadaProvince" icon:@"horseriding_GranadaProvince"],
-        [MDActivity activityWithTitle:@"HuelvaProvince" icon:@"horseriding_HuelvaProvince"],
-        [MDActivity activityWithTitle:@"MalagaProvince" icon:@"horseriding_MalagaProvince"],
-        [MDActivity activityWithTitle:@"SevilleProvince" icon:@"horseriding_SevilleProvince"]
+        [MDProvinceActivity activityWithTitle:@"CadizProvince" icon:@"horseriding_CadizProvince"],
+        [MDProvinceActivity activityWithTitle:@"GranadaProvince" icon:@"horseriding_GranadaProvince"],
+        [MDProvinceActivity activityWithTitle:@"HuelvaProvince" icon:@"horseriding_HuelvaProvince"],
+        [MDProvinceActivity activityWithTitle:@"MalagaProvince" icon:@"horseriding_MalagaProvince"],
+        [MDProvinceActivity activityWithTitle:@"SevilleProvince" icon:@"horseriding_SevilleProvince"]
     ];
 }
 
 - (NSArray *)sup {
     return @[
-    [MDActivity activityWithTitle:@"CadizProvince" icon:@"sup_CadizProvince"],
-    [MDActivity activityWithTitle:@"MalagaProvince" icon:@"sup_MalagaProvince"]
+    [MDProvinceActivity activityWithTitle:@"CadizProvince" icon:@"sup_CadizProvince"],
+    [MDProvinceActivity activityWithTitle:@"MalagaProvince" icon:@"sup_MalagaProvince"]
     ];
 }
 
 - (NSArray *)surf {
     return @[
-    [MDActivity activityWithTitle:@"CadizProvince" icon:@"surf_CadizProvince"],
-    [MDActivity activityWithTitle:@"MalagaProvince" icon:@"surf_MalagaProvince"]
+    [MDProvinceActivity activityWithTitle:@"CadizProvince" icon:@"surf_CadizProvince"],
+    [MDProvinceActivity activityWithTitle:@"MalagaProvince" icon:@"surf_MalagaProvince"]
     ];
 }
 
 - (NSArray *)kitesurf {
     return @[
-        [MDActivity activityWithTitle:@"AlmeriaProvince" icon:@"kitesurf_AlmeriaProvince"],
-    [MDActivity activityWithTitle:@"CadizProvince" icon:@"kitesurf_CadizProvince"],
-    [MDActivity activityWithTitle:@"MalagaProvince" icon:@"kitesurf_MalagaProvince"]
+        [MDProvinceActivity activityWithTitle:@"AlmeriaProvince" icon:@"kitesurf_AlmeriaProvince"],
+    [MDProvinceActivity activityWithTitle:@"CadizProvince" icon:@"kitesurf_CadizProvince"],
+    [MDProvinceActivity activityWithTitle:@"MalagaProvince" icon:@"kitesurf_MalagaProvince"]
     ];
 }
 
 - (NSArray *)rockClibing {
     return @[
-    [MDActivity activityWithTitle:@"CadizProvince" icon:@"rockClibing_CadizProvince"],
-    [MDActivity activityWithTitle:@"GranadaProvince" icon:@"rockClibing_GranadaProvince"],
-    [MDActivity activityWithTitle:@"JaenProvince" icon:@"rockClibing_JaenProvince"],
-    [MDActivity activityWithTitle:@"MalagaProvince" icon:@"rockClibing_MalagaProvince"],
-    [MDActivity activityWithTitle:@"SevilleProvince" icon:@"rockClibing_SevilleProvince"]
+    [MDProvinceActivity activityWithTitle:@"CadizProvince" icon:@"rockClibing_CadizProvince"],
+    [MDProvinceActivity activityWithTitle:@"GranadaProvince" icon:@"rockClibing_GranadaProvince"],
+    [MDProvinceActivity activityWithTitle:@"JaenProvince" icon:@"rockClibing_JaenProvince"],
+    [MDProvinceActivity activityWithTitle:@"MalagaProvince" icon:@"rockClibing_MalagaProvince"],
+    [MDProvinceActivity activityWithTitle:@"SevilleProvince" icon:@"rockClibing_SevilleProvince"]
     ];
 }
 
 - (NSArray *)sailing {
     return @[
-    [MDActivity activityWithTitle:@"AlmeriaProvince" icon:@"sailing_AlmeriaProvince"],
-    [MDActivity activityWithTitle:@"CadizProvince" icon:@"sailing_CadizProvince"],
-    [MDActivity activityWithTitle:@"HuelvaProvince" icon:@"sailing_HuelvaProvince"],
-    [MDActivity activityWithTitle:@"MalagaProvince" icon:@"sailing_MalagaProvince"]
+    [MDProvinceActivity activityWithTitle:@"AlmeriaProvince" icon:@"sailing_AlmeriaProvince"],
+    [MDProvinceActivity activityWithTitle:@"CadizProvince" icon:@"sailing_CadizProvince"],
+    [MDProvinceActivity activityWithTitle:@"HuelvaProvince" icon:@"sailing_HuelvaProvince"],
+    [MDProvinceActivity activityWithTitle:@"MalagaProvince" icon:@"sailing_MalagaProvince"]
     ];
 }
 
 - (NSArray *)scubaDiving {
     return @[
-    [MDActivity activityWithTitle:@"AlmeriaProvince" icon:@"scubaDiving_AlmeriaProvince"],
-    [MDActivity activityWithTitle:@"CadizProvince" icon:@"scubaDiving_CadizProvince"],
-    [MDActivity activityWithTitle:@"GranadaProvince" icon:@"scubaDiving_GranadaProvince"],
-    [MDActivity activityWithTitle:@"MalagaProvince" icon:@"scubaDiving_MalagaProvince"]
+    [MDProvinceActivity activityWithTitle:@"AlmeriaProvince" icon:@"scubaDiving_AlmeriaProvince"],
+    [MDProvinceActivity activityWithTitle:@"CadizProvince" icon:@"scubaDiving_CadizProvince"],
+    [MDProvinceActivity activityWithTitle:@"GranadaProvince" icon:@"scubaDiving_GranadaProvince"],
+    [MDProvinceActivity activityWithTitle:@"MalagaProvince" icon:@"scubaDiving_MalagaProvince"]
     ];
 }
 
 - (NSArray *)ski {
     return @[
-    [MDActivity activityWithTitle:@"GranadaProvince" icon:@"ski_GranadaProvince"]
+    [MDProvinceActivity activityWithTitle:@"GranadaProvince" icon:@"ski_GranadaProvince"]
     ];
 }
 
 - (NSArray *)walking {
     return @[
-    [MDActivity activityWithTitle:@"AlmeriaProvince" icon:@"walking_AlmeriaProvince"],
-    [MDActivity activityWithTitle:@"CadizProvince" icon:@"walking_CadizProvince"],
-    [MDActivity activityWithTitle:@"GranadaProvince" icon:@"walking_GranadaProvince"],
-    [MDActivity activityWithTitle:@"HuelvaProvince" icon:@"walking_HuelvaProvince"],
-    [MDActivity activityWithTitle:@"MalagaProvince" icon:@"walking_MalagaProvince"],
-    [MDActivity activityWithTitle:@"SevilleProvince" icon:@"walking_SevilleProvince"]
+    [MDProvinceActivity activityWithTitle:@"AlmeriaProvince" icon:@"walking_AlmeriaProvince"],
+    [MDProvinceActivity activityWithTitle:@"CadizProvince" icon:@"walking_CadizProvince"],
+    [MDProvinceActivity activityWithTitle:@"GranadaProvince" icon:@"walking_GranadaProvince"],
+    [MDProvinceActivity activityWithTitle:@"HuelvaProvince" icon:@"walking_HuelvaProvince"],
+    [MDProvinceActivity activityWithTitle:@"MalagaProvince" icon:@"walking_MalagaProvince"],
+    [MDProvinceActivity activityWithTitle:@"SevilleProvince" icon:@"walking_SevilleProvince"]
     ];
 }
 
 - (NSArray *)windsurf {
     return @[
-    [MDActivity activityWithTitle:@"AlmeriaProvince" icon:@"windsurf_AlmeriaProvince"],
-    [MDActivity activityWithTitle:@"CadizProvince" icon:@"windsurf_CadizProvince"],
-    [MDActivity activityWithTitle:@"GranadaProvince" icon:@"windsurf_GranadaProvince"],
-    [MDActivity activityWithTitle:@"HuelvaProvince" icon:@"windsurf_HuelvaProvince"]
+    [MDProvinceActivity activityWithTitle:@"AlmeriaProvince" icon:@"windsurf_AlmeriaProvince"],
+    [MDProvinceActivity activityWithTitle:@"CadizProvince" icon:@"windsurf_CadizProvince"],
+    [MDProvinceActivity activityWithTitle:@"GranadaProvince" icon:@"windsurf_GranadaProvince"],
+    [MDProvinceActivity activityWithTitle:@"HuelvaProvince" icon:@"windsurf_HuelvaProvince"]
     ];
 }
 
