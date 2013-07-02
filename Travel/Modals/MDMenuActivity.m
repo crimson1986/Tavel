@@ -159,7 +159,7 @@
     if ([self.title isEqualToString:@"Adventure"]) {
         [self.provices addObjectsFromArray:[self adventure]];
         
-    } else if([self.title isEqualToString:@"Cycling	"]){
+    } else if([self.title isEqualToString:@"Cycling"]){
         [self.provices addObjectsFromArray:[self cycling]];
     }
     else if([self.title isEqualToString:@"Groups"]){
